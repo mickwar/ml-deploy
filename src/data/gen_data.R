@@ -18,11 +18,11 @@ colnames(test_x) = paste0("x", 1:k)
 colnames(test_y) = "y"
 
 
-### Save the "raw" training data
-write.table(round(train_x, 3), "./raw_train_x.txt", quote = FALSE, row.names = FALSE)
-write.table(round(train_y, 3), "./raw_train_y.txt", quote = FALSE, row.names = FALSE)
+### Save data
+# Train
+write.table(round(train_x, 3), "./train_x.txt", quote = FALSE, row.names = FALSE)
+write.table(round(train_y, 3), "./train_y.txt", quote = FALSE, row.names = FALSE)
 
-### In production, we would expect to only have raw x's (i.e. unprocessed features),
-### but we use test_y so we can validate our model
-write.table(round(test_x, 3), "./raw_test_x.txt", quote = FALSE, row.names = FALSE)
-write.table(round(test_y, 3), "./raw_test_y.txt", quote = FALSE, row.names = FALSE)
+# Test
+write.table(round(test_x, 3), "./test_x.txt", quote = FALSE, row.names = FALSE)
+write.table(round(test_y, 3), "./test_y.txt", quote = FALSE, row.names = FALSE)
