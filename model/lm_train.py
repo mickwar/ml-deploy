@@ -12,7 +12,6 @@ mod = linear_model.LinearRegression()
 mod.fit(train_x, train_y)
 
 # Output the model with pickle
-pfile = open("lm_mod.pickle", "wb")
-pickle.dump(mod, pfile)
-pfile.close()
+with open("lm_mod.pickle", "wb") as f:
+    pickle.dump(mod, f)
 
