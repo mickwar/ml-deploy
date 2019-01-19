@@ -15,12 +15,14 @@ It is recommended to use a [virtual environment](https://virtualenv.pypa.io/en/l
 
 ```bash
 # bash
-pip install virtualenv
-virtualenv my_env                 # initialize a virtual environment
-source my_env/bin/activate        # activate the environment
-pip install -r requirements.txt   # install the required packages of this repository to the environment
-pip list                          # view list of installed packages
+pip install virtualenv          # install virtualenv module
+virtualenv .env                 # initialize a virtual environment named .env
+source .env/bin/activate        # activate the environment
+pip install -r requirements.txt # install the required packages of this example to the environment
+pip list                        # view list of installed packages
 ```
+
+(Note that the virtual environment can be named whatever, but the local `.gitignore` will exclude the `.env` directory.)
 
 When within the virtual environment, packages were installed via `pip install`. But when the environment is set up as desired, future intializations are completed using the [requirements.txt](./requirements.txt) file as above.
 
@@ -28,13 +30,13 @@ The `requirements.txt` file was generated with
 ```bash
 pip freeze > requirements.txt
 ```
-while within the virtual environment. The command `pip freeze` takes a snapshot of the current modules and their version numbers.
+while within the virtual environment. The command `pip freeze` takes a snapshot of the currently installed modules and their version numbers.
 
 The virtual environment is activated with
 ```bash
-source my_env/bin/activate
+source .env/bin/activate
 ```
-and will prepend the prompt to include `(my_env)`.
+and will prepend the prompt to include `(.env)`.
 
 The virtual environment can be deactivated simply with
 ```bash
