@@ -22,10 +22,10 @@ header_y = 'y'
 
 ### Save data
 # Train
-np.savetxt("./train_x.txt", train_x, fmt = "%.3f", header = header_x, comments = '')
-np.savetxt("./train_y.txt", train_y, fmt = "%.3f", header = header_y, comments = '')
+np.savetxt("data/train_x.txt", train_x, fmt = "%.3f", header = header_x, comments = '')
+np.savetxt("data/train_y.txt", train_y, fmt = "%.3f", header = header_y, comments = '')
 
 # Test
-np.savetxt("./test_x.txt", test_x, fmt = "%.3f", header = header_x, comments = '')
-np.savetxt("./test_y.txt", test_y, fmt = "%.3f", header = header_y, comments = '')
+np.savetxt("data/test_x.txt", test_x, fmt = "%.3f", header = header_x, comments = '')
+np.savetxt("data/test_y.txt", test_y, fmt = "%.3f", header = header_y, comments = '')
 
