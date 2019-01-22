@@ -1,4 +1,5 @@
 *.txt
 *.pickle
 *.pyc
-.env
+.env/
+env/
