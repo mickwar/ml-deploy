@@ -21,7 +21,7 @@ def apicall():
         test_x = test_x.values
 
         # Load model
-        with open("model/lm_mod.pickle") as f:
+        with open("model/lm_mod.pickle", "rb") as f:
             mod = pickle.load(f)
 
         # Make predictions (returns a numpy array)
