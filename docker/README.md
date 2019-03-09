@@ -8,6 +8,7 @@
 
 command                     | description
 -------                     | -----------
+`docker build .`            | build an image from a dockerfile (found in current directory)
 `docker images`             | list images
 `docker image prune`        | remove unused (including intermediary) images
 `docker ps`                 | list containers (`-a` to show all, including stopped)
