@@ -89,3 +89,20 @@ The [pred.py](pred.py) script sends the test data (in JSON format) to the server
 The data is processed within `server.apicall()` and the predictions (as JSON) are sent back to the user.
 
 It may be most convenient play with `pred.py` interactively.
+
+
+## Docker
+
+[Install Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+[Use Docker without sudo](https://docs.docker.com/install/linux/linux-postinstall/)
+
+### Useful Docker commands
+
+command                     | description
+-------                     | -----------
+`docker build .`            | build an image from a dockerfile (found in current directory)
+`docker images`             | list images
+`docker image prune`        | remove unused (including intermediary) images
+`docker ps`                 | list containers (`-a` to show all, including stopped)
+`docker container prune`    | remove all stopped containers
