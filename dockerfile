@@ -10,11 +10,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # RUN alias pip=pip3
 
 # Install the required python modules
-COPY requirements.txt .
-RUN pip3 install setuptools wheel -r requirements.txt
+COPY requirements.txt /opt/program/
+RUN pip3 install setuptools wheel -r /opt/program/requirements.txt
 
 # Some environment variables to optimize python
 ENV PYTHONUNBUFFERED=TRUE
 ENV PYTHONDONTWRITEBYTECODE=TRUE
 
-ENTRYPOINT["python3", "serve"]
+#ENTRYPOINT["python3", "serve"]
