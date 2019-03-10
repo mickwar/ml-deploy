@@ -97,6 +97,14 @@ It may be most convenient play with `pred.py` interactively.
 
 [Use Docker without sudo](https://docs.docker.com/install/linux/linux-postinstall/)
 
+To run the container interactively, comment out the ENTRYPOINT line in the `dockerfile` when building the image.
+This shouldn't really be the case, but I couldn't figure out how to be able to run the container normally and also have access to it interactively.
+
+Run the container with
+```bash
+docker run -p 8181:8000 ml-deploy
+```
+
 ### Useful Docker commands
 
 command                     | description

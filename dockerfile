@@ -6,15 +6,23 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip
 
 # # Make aliases
-# RUN alias python=python3
-# RUN alias pip=pip3
+RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN ln -s /usr/bin/pip3 /usr/bin/pip
 
 # Install the required python modules
-COPY requirements.txt /opt/program/
-RUN pip3 install setuptools wheel -r /opt/program/requirements.txt
+# No need for a virtual environment here
+COPY program/ /opt/program/
+WORKDIR /opt/program/
+RUN pip install setuptools wheel -r requirements.txt
 
 # Some environment variables to optimize python
 ENV PYTHONUNBUFFERED=TRUE
 ENV PYTHONDONTWRITEBYTECODE=TRUE
 
-#ENTRYPOINT["python3", "serve"]
+# Set up the container to have the training data and the trained model
+# (Normally, the model would be trained outside of the container, but this
+# example is very cheap to run so it's not a big deal)
+RUN ./setup.sh
+
+# On container start up, run the command that starts the gunicorn server
+ENTRYPOINT ["./run.sh", "fg"]
