@@ -26,4 +26,6 @@ pred_y = pd.read_json(resp.json()["predictions"], orient = "records")
 test_y = pd.read_csv("data/test_y.txt", sep = ' ')
 
 # MSE
-sum((test_y.values - pred_y.values) ** 2) / len(test_y)
+print(pred_y)
+print("")
+print(sum((test_y.values - pred_y.values) ** 2) / len(test_y))
