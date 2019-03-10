@@ -22,9 +22,9 @@ resp = requests.post("http://0.0.0.0:8000/predict",
     headers = header)
 
 # When testing with Docker (assuming the address binding was 8181:8000)
-resp = requests.post("http://0.0.0.0:8181/predict",
-    data = json.dumps(test_x.to_json(orient = "records")),
-    headers = header)
+#resp = requests.post("http://0.0.0.0:8181/predict",
+#    data = json.dumps(test_x.to_json(orient = "records")),
+#    headers = header)
 
 
 # Test set and predictions
