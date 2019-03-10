@@ -16,3 +16,5 @@ RUN pip3 install setuptools wheel -r requirements.txt
 # Some environment variables to optimize python
 ENV PYTHONUNBUFFERED=TRUE
 ENV PYTHONDONTWRITEBYTECODE=TRUE
+
+ENTRYPOINT["python3", "serve"]
