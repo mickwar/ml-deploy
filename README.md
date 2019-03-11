@@ -25,7 +25,7 @@ pip install -r requirements.txt     # install the required packages of this exam
 pip list                            # view list of installed packages
 ```
 
-(Note that the virtual environment can be named whatever, but the local `.gitignore` will exclude the `.env` directory.)
+(Note that the virtual environment can be named whatever, but the local `.gitignore` will exclude the `env` directory.)
 
 When within the virtual environment, packages were installed via `pip install`. But when the environment is set up as desired, future intializations are completed using the [requirements.txt](program/requirements.txt) file as above.
 
